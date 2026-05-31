@@ -1,0 +1,26 @@
+{
+    "model": {
+        "img_ch": 17,
+        "output_ch": 1,
+        "wave": "haar"
+    },
+    "train": {
+        "epochs": 100,
+        "batch_size": 6,
+        "lr": 0.001,
+        "warmup_epochs": 10,
+        "grad_clip": 1.0,
+
+        "finetune_pretrained_path": "./weight/train_alldata.pt",
+        "finetune_epochs": 100,
+        "finetune_lr": 0.0001,
+        "finetune_warmup_ratio": 0.1,
+        "finetune_min_lr_ratio": 0.001
+    },
+    "loss": {
+        "asl_gamma_neg": 3,
+        "asl_gamma_pos": 0,
+        "asl_clip": 0.05,
+        "asl_pos_weight": 8.0
+    }
+}
