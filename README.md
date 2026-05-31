@@ -1,4 +1,4 @@
-# FWUFold: Fast and Accurate RNA Secondary Structure Prediction with Deep Learning
+# FWUFold: A Frequency-Wavelet Enhanced U-Net Architecture for Accurate RNA Secondary Structure Prediction.
 ## Abstract
 The precise prediction of RNA secondary structures is vital for unlocking their biological functions, yet conventional models face a major performance bottleneck when dealing with complex long-range dependencies and multi-scale features. To bridge this gap, we introduce FWUFold, a cutting-edge deep learning framework. FWUFold fuses the Discrete Wavelet Transform (DWT) into the pipeline of the classic U-Net. By breaking down intricate RNA sequences into multi-resolution frequency components, it vastly empowers the model to capture sharp structural boundaries and long-distance base pairs.
 
