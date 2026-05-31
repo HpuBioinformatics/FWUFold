@@ -58,7 +58,7 @@ We support two prediction modes depending on your input format: using a FASTA fi
 python predict.py --fasta_file ./data/my_sequences.fasta --save_dir ./weights --output_dir ./my_results --gpu_id 0
 ```
 ```bash
-python predict.py --raw_seq "GGGCCCGUAGUCUCAGGGUAAGAGCACACGCUGAAGUGUGUGGGUCGGCAGUUCGAUCCCGCUGCGGCCCACCA" --seq_name "tRNA_example" --save_dir ./weights```
+python predict.py --raw_seq "GGGCCCGUAGUCUCAGGGUAAGAGCACACGCUGAAGUGUGUGGGUCGGCAGUUCGAUCCCGCUGCGGCCCACCA" --seq_name "tRNA_example" --save_dir ./weights
 ```
 Note: fasta_file is the directory for your predictions, which contains the FASTA files to be processed.
 ## Acknowledgements
