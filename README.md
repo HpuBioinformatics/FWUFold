@@ -55,10 +55,10 @@ python test.py --test_files bpRNA
 ### Predicting
 We support two prediction modes depending on your input format: using a FASTA file (fasta_file) or a plain text sequence (raw_seq).
 ```bash
-python predict.py --fasta_file ./data/my_sequences.fasta --save_dir ./weights --output_dir ./my_results --gpu_id 0
+python predict.py --fasta_file ./data/my_sequences.fasta --weight_path ./trian_alldata.pt --output_dir ./my_results --gpu_id 0
 ```
 ```bash
-python predict.py --raw_seq "GGGCCCGUAGUCUCAGGGUAAGAGCACACGCUGAAGUGUGUGGGUCGGCAGUUCGAUCCCGCUGCGGCCCACCA" --seq_name "tRNA_example" --save_dir ./weights
+python predict.py --raw_seq "GGGCCCGUAGUCUCAGGGUAAGAGCACACGCUGAAGUGUGUGGGUCGGCAGUUCGAUCCCGCUGCGGCCCACCA" --seq_name "tRNA_example" --weight_path ./trian_alldata.pt --output_dir ./my_results --gpu_id 0
 ```
 Note: fasta_file is the directory for your predictions, which contains the FASTA files to be processed.
 ## Acknowledgements
