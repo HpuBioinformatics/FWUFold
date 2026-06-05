@@ -71,18 +71,15 @@ def parse_args():
     parser.add_argument('--test', action='store_true', help='Skip training to test directly.')
     parser.add_argument('--nc', action='store_true', help='Whether predict non-canonical pairs.')
 
-    # 训练集
     parser.add_argument('--train_files', type=str, nargs='+', default=['RNAStrAlign', 'bpRNA'],
                         choices=['RNAStrAlign', 'bpRNA', 'ArchiveII', 'PDB', 'mutate', 'bpRNA-new'],
                         help='Training dataset name list.')
 
-    # 验证集
     parser.add_argument('--val_files', type=str, nargs='+', default=['RNAStrAlign', 'bpRNA'],
                         choices=['RNAStrAlign', 'bpRNA', 'ArchiveII', 'PDB', 'bpRNA-new', 'TS1', 'TS2', 'TS3',
                                  'TS_hard', 'TS123'],
                         help='Validation dataset name list.')
 
-    # 测试集
     parser.add_argument('--test_files', type=str, default='ArchiveII',
                         choices=['RNAStrAlign', 'bpRNA', 'ArchiveII', 'PDB', 'mutate', 'bpRNA-new', 'TS1', 'TS2', 'TS3',
                                  'TS_hard', 'TS123'],
