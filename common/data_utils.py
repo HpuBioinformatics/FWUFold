@@ -163,7 +163,6 @@ def build_scaled_mask_and_gt(
 ):
     B, L_full, _ = contacts_full.shape
 
-    # ── GT 下采样 ─────────────────────────────────────────────────────
     if target_size == L_full:
         gt_scaled = contacts_full
     else:
@@ -172,7 +171,6 @@ def build_scaled_mask_and_gt(
             output_size=(target_size, target_size)
         ).squeeze(1)
 
-    # ── 有效区域 mask（仅排除 padding） ───────────────────────────────
     scale_ratio = target_size / L_full
     mask_scaled = torch.zeros(B, target_size, target_size, device=device)
     for k, seq_len in enumerate(data_length):
@@ -182,7 +180,6 @@ def build_scaled_mask_and_gt(
     return gt_scaled, mask_scaled
 
 def read_fasta(fasta_file: str):
-    """读取 FASTA 文件并返回 (名称, 序列) 列表"""
     samples = []
     with open(fasta_file, 'r') as f:
         name = ""
