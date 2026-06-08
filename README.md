@@ -32,6 +32,7 @@ conda env create -f environmnet.yaml
 ### 3.Activate conda environment.
 ```
 conda activate FWUFold
+cd FWUFold
 ``` 
 
 ## Usage
